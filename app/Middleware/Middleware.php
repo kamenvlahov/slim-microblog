@@ -1,19 +1,15 @@
 <?php
 
-namespace App\Controllers;
+namespace App\Middleware;
 
 use Psr\Container\ContainerInterface;
 
-class Controller 
+class Middleware
 {
     protected $container;
-    protected $db;
-    protected $validator;
 
     public function __construct(ContainerInterface $container)
     {
         $this->container = $container;
-        $this->db = $container->get('db');
-        $this->validator = $this->container->validator;
     }
 }
