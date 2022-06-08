@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cbe1c59423f88cd1452b510682cab8e9",
+    "content-hash": "e69e38280b30c7468bd9d2da095fc3ee",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -479,6 +479,69 @@
                 "source": "https://github.com/laravel/framework"
             },
             "time": "2022-06-02T14:10:45+00:00"
+        },
+        {
+            "name": "lulco/phoenix",
+            "version": "2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lulco/phoenix.git",
+                "reference": "a3889367d49dbf87c20ed850cca6b85758e34297"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lulco/phoenix/zipball/a3889367d49dbf87c20ed850cca6b85758e34297",
+                "reference": "a3889367d49dbf87c20ed850cca6b85758e34297",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-pdo": "*",
+                "php": ">= 7.4 <8.2",
+                "symfony/console": "^5.2.12|^6.0",
+                "symfony/finder": "^5.0|^6.0"
+            },
+            "require-dev": {
+                "nette/neon": "^2.3|^3.0",
+                "phpunit/phpunit": "^9.5.11",
+                "ramsey/uuid": "^3.7|^4.0",
+                "symfony/yaml": "^5.0|^6.0"
+            },
+            "suggest": {
+                "nette/neon": "Allows use *.neon file as config file and class Phoenix\\Config\\Parser\\NeonConfigParser to parse it",
+                "symfony/yaml": "Allows use *.yml / *.yaml file as config file and class Phoenix\\Config\\Parser\\YamlConfigParser to parse it"
+            },
+            "bin": [
+                "bin/phoenix"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Phoenix\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Database Migrations for PHP",
+            "keywords": [
+                "Multiple folders",
+                "create",
+                "database",
+                "dump",
+                "migrate",
+                "migrations",
+                "php",
+                "query builder",
+                "rollback",
+                "status"
+            ],
+            "support": {
+                "issues": "https://github.com/lulco/phoenix/issues",
+                "source": "https://github.com/lulco/phoenix/tree/2.2.0"
+            },
+            "time": "2022-04-26T09:53:45+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -957,6 +1020,58 @@
             "time": "2021-03-19T14:12:45+00:00"
         },
         {
+            "name": "slim/flash",
+            "version": "0.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/slimphp/Slim-Flash.git",
+                "reference": "9aaff5fded3b54f4e519ec3d4ac74d3d1f2cbbbc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/slimphp/Slim-Flash/zipball/9aaff5fded3b54f4e519ec3d4ac74d3d1f2cbbbc",
+                "reference": "9aaff5fded3b54f4e519ec3d4ac74d3d1f2cbbbc",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Slim\\Flash\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Josh Lockhart",
+                    "email": "hello@joshlockhart.com",
+                    "homepage": "http://joshlockhart.com"
+                }
+            ],
+            "description": "Slim Framework Flash message service provider",
+            "homepage": "http://slimframework.com",
+            "keywords": [
+                "flash",
+                "framework",
+                "message",
+                "provider",
+                "slim"
+            ],
+            "support": {
+                "issues": "https://github.com/slimphp/Slim-Flash/issues",
+                "source": "https://github.com/slimphp/Slim-Flash/tree/master"
+            },
+            "time": "2017-10-22T10:35:05+00:00"
+        },
+        {
             "name": "slim/slim",
             "version": "3.12.3",
             "source": {
@@ -1250,6 +1365,70 @@
                 }
             ],
             "time": "2022-02-25T11:15:52+00:00"
+        },
+        {
+            "name": "symfony/finder",
+            "version": "v6.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/finder.git",
+                "reference": "45b8beb69d6eb3b05a65689ebfd4222326773f8f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/45b8beb69d6eb3b05a65689ebfd4222326773f8f",
+                "reference": "45b8beb69d6eb3b05a65689ebfd4222326773f8f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1"
+            },
+            "require-dev": {
+                "symfony/filesystem": "^6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Finder\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Finds files and directories via an intuitive fluent interface",
+            "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/finder/tree/v6.1.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-04-15T08:08:08+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",

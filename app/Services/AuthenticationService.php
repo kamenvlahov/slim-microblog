@@ -2,7 +2,7 @@
 
 namespace App\Services;
 
-use App\Model\UserModel;
+use App\Models\UserModel;
 
 class AuthenticationService
 {
@@ -11,20 +11,23 @@ class AuthenticationService
         return isset($_SESSION['user']);
     }
 
-    public function getLogedUser()
+    public function getLogedUser(): int
     {
         $user_id = $this->checkForLogin();
         return $user_id;
     }
 
+    public function logOut(): bool
+    {
+        unset($_SESSION['user']);
+        return true;
+    }
     public function setLogin($email, $password): bool
     {
-        $user =  UserModel::where('email', $email)->first();
-
-        if (!$user) {
+        $user = UserModel::where('username', $email)->first();
+        if (!$user->id) {
             return false;
         }
-
         if (password_verify($password, $user->password)) {
             $_SESSION['user'] = $user->id;
             return true;
