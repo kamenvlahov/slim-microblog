@@ -11,6 +11,8 @@ $container['view'] = function ($container) {
     ]);
     $basePath = rtrim(str_ireplace('index.php', '', $container['request']->getUri()->getBasePath()), '/');
     $view->addExtension(new Slim\Views\TwigExtension($container['router'], $basePath));
+    $view->getEnvironment()->addGlobal('flash', $container->flash);
+    $view->getEnvironment()->addGlobal('test', 'Test');
     return $view;
 };
 
@@ -32,7 +34,15 @@ $container['db'] = function ($container) use ($capsule) {
 $container['validator'] = function ($container) {
     return new App\Validation\Validator();
 };
-
-$container['authentication'] = function($container){
+/* 
+    Flash container
+*/
+$container['authentication'] = function ($container) {
     return new \App\Services\AuthenticationService();
+};
+/* 
+    Flash container
+*/
+$container['flash'] = function () {
+    return new \Slim\Flash\Messages();
 };
