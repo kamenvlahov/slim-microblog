@@ -1,0 +1,22 @@
+{% extends "layout.twig" %}
+{% block content %}
+	<div class=" container">
+		<div class="row">
+			<div class="col-8">
+                {% for image in article.images %}
+                <img src="/uploads/{{ image.url }}" alt="{{ article.title }}" width="100%" height="auto">
+                {% endfor %}
+                <h1>{{ article.title }}</h1>
+                <h2>{{ article.description }}</h2>
+                <small>{{ article.user.username }}</small>
+                <small>{{ article.updated_at }}</small>
+                <p>{{ article.body }}</p>
+            </div>
+            <div class="col-4 p-3 mb-2 bg-info text-white">
+                <a class="btn btn-dark" href="{{path_for('articles')}}">
+                    <ion-icon name="arrow-back-outline"></ion-icon> Back to list
+                </a>
+            </div>
+		</div>
+	</div>
+{% endblock %}

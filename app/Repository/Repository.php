@@ -1,16 +1,14 @@
 <?php
-
-namespace App\Controllers;
+namespace App\Repository;
 
 use Psr\Container\ContainerInterface;
 
-class Controller 
+class Repository 
 {
     protected $container;
 
     public function __construct(ContainerInterface $container)
     {
         $this->container = $container;
-        $this->validator = $this->container->validator;
     }
 }

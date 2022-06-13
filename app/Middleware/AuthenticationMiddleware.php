@@ -11,7 +11,7 @@ class AuthenticationMiddleware extends Middleware
     public function __invoke(ServerRequestInterface $request, ResponseInterface $response, callable $next)
     {
         $check = $this->container->authentication->checkForLogin();
-        if($check){
+        if(!$check){
             return $response->withRedirect($this->container->router->pathFor('auth.signin'));
         }
         $response = $next($request, $response);
