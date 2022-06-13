@@ -7,15 +7,18 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class UserModel extends Model
+class ImageModel extends Model
 {
-    protected $table = "users";
+    protected $table = "images";
 
     protected $fillable = [
-        'username',
-        'password',
-        'rights'
+        'url',
+        'article_id'
     ];
 
-    
+    public function article(): BelongsTo
+    {
+        return $this->belongsTo(ArticlesModel::class, 'article_id');
+    }
+
 }

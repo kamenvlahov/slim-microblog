@@ -13,8 +13,7 @@ class AuthenticationService
 
     public function getLogedUser(): int
     {
-        $user_id = $this->checkForLogin();
-        return $user_id;
+        return $this->checkForLogin();
     }
 
     public function logOut(): bool

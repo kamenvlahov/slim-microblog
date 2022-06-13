@@ -8,19 +8,19 @@ final class Articles extends AbstractMigration
 {
     protected function up(): void
     {
-        $this->execute('CREATE TABLE blog.articles (
-            id INT NOT NULL AUTO_INCREMENT,
-            title varchar(255) NOT NULL,
-            description varchar(255) NULL,
-            body TEXT NULL,
-            user_id INT NULL,
-            date_created DATETIME NOT NULL,
-            CONSTRAINT articles_pk PRIMARY KEY (id),
-            CONSTRAINT articles_fk FOREIGN KEY (user_id) REFERENCES blog.users(id)
-        )
-        ENGINE=InnoDB
-        DEFAULT CHARSET=utf8
-        COLLATE=utf8_bin;
+        $this->execute('CREATE TABLE `articles` (
+            `id` int(11) NOT NULL AUTO_INCREMENT,
+            `title` varchar(255) COLLATE utf8_bin NOT NULL,
+            `description` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+            `body` text COLLATE utf8_bin DEFAULT NULL,
+            `user_id` int(11) DEFAULT NULL,
+            `date_created` datetime NOT NULL,
+            `updated_at` datetime DEFAULT NULL,
+            `created_at` datetime DEFAULT NULL,
+            PRIMARY KEY (`id`),
+            KEY `articles_fk` (`user_id`),
+            CONSTRAINT `articles_fk` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
+          ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_bin
         '
         );
     }
