@@ -1,6 +1,8 @@
 # slim-microblog
 
 ## Before start
-Run composer update
-For database migration run vendor/bin/phoenix migrate
-php -S localhost:8080
+<pre>composer update</pre>
+<pre>For database migration run vendor/bin/phoenix migrate</pre>
+<pre>php -S localhost:8080</pre>
+
+
